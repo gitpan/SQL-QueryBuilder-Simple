@@ -1,5 +1,10 @@
 Revision history for Perl extension SQL::QueryBuilder::Simple.
 
+0.04  15 Nov 2001
+	- added TODO file
+	- fields in where clauses and binding parameters are now in
+          semi-sorted order
+
 0.03   7 Nov 2001
 	- first version released
 

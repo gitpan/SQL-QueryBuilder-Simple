@@ -18,7 +18,7 @@ our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 
 our @EXPORT = qw( );
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 my %METHOD_SYMBOLS;
 
@@ -309,7 +309,7 @@ sub sql
 	}
       }
 
-      foreach my $method (keys %METHOD_SYMBOLS) {
+      foreach my $method (sort keys %METHOD_SYMBOLS) {
 
       my %clauses = $self->$method;
       if (keys %clauses)
@@ -332,7 +332,7 @@ sub sql
 		{
 		  eq_null( $_, $clauses{$_}, $METHOD_SYMBOLS{ $method } );
 		}
-	    } keys %clauses);
+	    } sort keys %clauses);
 
 	}
 
@@ -368,7 +368,7 @@ sub bindings
 
     my @binds = ( );
 
-    foreach my $method (keys %METHOD_SYMBOLS) {
+    foreach my $method (sort keys %METHOD_SYMBOLS) {
 
       my %clauses = $self->$method;
 
@@ -387,7 +387,7 @@ sub bindings
 	    } else {
 	      # do nothing: don't even return an undef
 	    }
-	  } (keys %clauses);
+	  } (sort keys %clauses);
 	}
 
     }
@@ -770,6 +770,8 @@ Complex where clauses beyond any/all are not supported.
 
 C<sql> cannot run when C<use_bindings> is false.  This feature is not yet
 implemented.
+
+See the TODO file in this distribution for future features.
 
 =head1 SEE ALSO
 

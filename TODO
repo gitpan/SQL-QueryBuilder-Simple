@@ -1,0 +1,13 @@
+To Do List for SQL::QueryBuilder::Simple
+
+General features to add:
+  - more comprehensive testing.
+  - possibly embedded tests (using Pod::Texts).
+  - implement a disabled use_bindings()
+  - implement a pretty() flag that enables "pretty" SQL output
+
+SQL Features to add:
+  - support for simple aggregate functions, GROUP BY.
+  - support for additional clauses (BETWEEN)
+  - support for comparing fields (WHERE FLD1=FLD2).
+
