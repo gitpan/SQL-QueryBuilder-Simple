@@ -1,0 +1,9 @@
+Revision history for Perl extension SQL::QueryBuilder::Simple.
+
+0.03   7 Nov 2001
+	- first version released
+
+0.01  25 Oct 2001
+	- original version; created by h2xs 1.21 with options
+		-v 0.01 -X -n SQL::QueryBuilder::Simple
+
